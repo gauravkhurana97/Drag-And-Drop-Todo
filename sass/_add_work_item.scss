@@ -55,6 +55,7 @@
             background-image: none;
             color: black;
             border-radius: 10px;
+
         }
 
         /* Remove IE arrow */
@@ -104,9 +105,11 @@
             width: 60px;
 
             border-radius: 50%;
+            outline: none;
+            border: 2px solid black;
 
             & img {
-                height: 60px;
+                height: 50px;
             }
         }
 

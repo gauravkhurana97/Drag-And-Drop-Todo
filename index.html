@@ -1,93 +1,109 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="description"
+        content="TODO APP : It allows you to store your Daily Task so that you can utilise your day wisely">
+    <meta name="keywords" content="TODO,DAILY TASK,DAILY ROUTINES,TASk,ROUTINES,TRELLO">
+    <meta name="author" content="Gaurav Khurana">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Drag And Drop Tod List</title>
     <link rel="stylesheet" href="./index.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164015975-1"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164015975-1');
+    </script>
+
 </head>
 
-<script>
- 
-
-
-</script>
 
 <body>
-    
+
     <div class="grid_layout">
         <header>
             <h1>Drag And Drop Todo List</h1>
         </header>
-    
+
         <div class="add_work_item">
-    
+
             <form class="enterWork">
-                <input id="what_work"    type="text" placeholder="Enter Todo" required onfocus="this.removeAttribute('readonly')" ></input>
+                <input id="what_work" type="text" placeholder="Enter Todo" required
+                    onfocus="this.removeAttribute('readonly')"></input>
                 <select id="type_of_work">
                     <option selected disabled>Choose an option</option>
                     <option value="Pending">Pending</option>
                     <option value="Doing">Doing</option>
                     <option value="Done">Done</option>
                 </select>
-                <button id = "check" type="submit">
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                <button id="check" type="submit">
+                    <img src="./add-24px.svg" alt="edit">
                 </button>
 
             </form>
-    
+
         </div>
-    
+
         <div class="wrapper_todos">
-    
-            
+
+
             <div class="wrapper">
                 <div class="todos" ondragover="allowDrop(event)" ondrop="drop(event)">
                     <fieldset>
                         <legend>TODO</legend>
-                    
+
                         <div class="allTODOLists">
 
                         </div>
-                        
+
                     </fieldset>
-                </form>
+                    </form>
                 </div>
-        
+
                 <div class="doing" ondragover="allowDrop(event)" ondrop="drop(event)">
                     <fieldset>
                         <legend>DOING</legend>
-                     <div class="allTODOLists">
+                        <div class="allTODOLists">
 
                         </div>
                     </fieldset>
-        
+
                 </div>
-        
-                <div class="done" ondragover="allowDrop(event)" ondrop="drop(event)"     >
-        
+
+                <div class="done" ondragover="allowDrop(event)" ondrop="drop(event)">
+
                     <fieldset>
                         <legend>DONE</legend>
 
-                    <div class="allTODOLists">
+                        <div class="allTODOLists">
 
-                    </div>
-                </fieldset>
+                        </div>
+                    </fieldset>
 
                 </div>
             </div>
-           
-    
+
+
         </div>
     </div>
- 
 
-    <script src="./index2.js" type="text/javascript" ></script>
-    <script src="./index.js" type="text/javascript" ></script>
+
+    <script src="./index2.js" type="text/javascript"></script>
+    <script src="./index.js" type="text/javascript"></script>
 
 </body>
+
 </html>
