@@ -1,0 +1,117 @@
+.add_work_item {
+
+    grid-row: 2 / span 1;
+    grid-column: full-start / full-end;
+
+    & .enterWork {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+
+        &>* {
+            margin: auto 30px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        & #what_work {
+            padding-left: 10px;
+            border-radius: 50px;
+            margin: 15px 0;
+            padding: 15px 10px;
+            width: 30%;
+            outline: none;
+            border: 1px solid #bbb;
+            border-radius: 20px;
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -ms-transition: 0.2s ease all;
+            -o-transition: 0.2s ease all;
+            transition: 0.2s ease all;
+
+
+            &:focus {
+                border: 5px solid cornflowerblue;
+            }
+
+            & ::placeholder {
+                color: green;
+            }
+        }
+
+        & select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            outline: 0;
+            box-shadow: none;
+            // border: 0 !important;
+            background-image: none;
+            color: black;
+            border-radius: 10px;
+        }
+
+        /* Remove IE arrow */
+        & select::-ms-expand {
+            display: none;
+        }
+
+        /* Custom Select */
+        & .select {
+            position: relative;
+            display: flex;
+            width: 20em;
+            height: 3em;
+            line-height: 3;
+            overflow: hidden;
+            border-radius: .25em;
+        }
+
+        & select {
+            padding: 0 .5em;
+            color: black;
+            cursor: pointer;
+        }
+
+        /* Arrow */
+        & .select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 1em;
+            cursor: pointer;
+            pointer-events: none;
+            -webkit-transition: .25s all ease;
+            -o-transition: .25s all ease;
+            transition: .25s all ease;
+        }
+
+        /* Transition */
+        & .select:hover::after {
+            color: #f39c12;
+        }
+
+
+        & #check {
+            height: 60px;
+            width: 60px;
+
+            border-radius: 50%;
+
+            & img {
+                height: 60px;
+            }
+        }
+
+
+
+    }
+
+}
