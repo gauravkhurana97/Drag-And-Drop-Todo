@@ -145,8 +145,9 @@ const DOMSTRING = {
 
 DOMSTRING.workadder.addEventListener('submit', (event) => {
 
-   event.preventDefault();
-
+      event.preventDefault();
+   document.getElementById("check").blur();
+   // event.target.focus = none;
    var inputvalue = DOMSTRING.work.value;
    var state = DOMSTRING.type_of_work.options[DOMSTRING.type_of_work.selectedIndex].value;
    console.log(state);

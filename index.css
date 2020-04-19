@@ -59,6 +59,8 @@ body {
       background-image: none;
       color: black;
       border-radius: 10px; }
+    .add_work_item .enterWork:focus {
+      border: 2px solid #7e8ca7; }
     .add_work_item .enterWork select::-ms-expand {
       display: none; }
     .add_work_item .enterWork .select {
@@ -71,8 +73,7 @@ body {
       border-radius: .25em; }
     .add_work_item .enterWork select {
       padding: 0 .5em;
-      color: black;
-      cursor: pointer; }
+      color: black; }
     .add_work_item .enterWork .select::after {
       content: '\25BC';
       position: absolute;
@@ -85,15 +86,20 @@ body {
       -o-transition: .25s all ease;
       transition: .25s all ease; }
     .add_work_item .enterWork .select:hover::after {
-      color: #f39c12; }
+      border: 4px solid #7e8ca7; }
     .add_work_item .enterWork #check {
       height: 60px;
       width: 60px;
       border-radius: 50%;
       outline: none;
-      border: 2px solid black; }
+      border: 2px solid black;
+      cursor: cell; }
+      .add_work_item .enterWork #check:focus {
+        border: 6px solid cornflowerblue; }
       .add_work_item .enterWork #check img {
         height: 50px; }
+  .add_work_item #type_of_work:focus {
+    border: 4px solid cornflowerblue; }
 
 header {
   justify-self: center;
@@ -170,7 +176,7 @@ header {
               width: 100%;
               outline: 0;
               padding: 0.5rem 0;
-              border-bottom: 2px solid #d3d3d3;
+              border-bottom: 2px solid cornflowerblue;
               box-shadow: none;
               color: #111;
               padding-left: 15px;
@@ -179,19 +185,6 @@ header {
               .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .edittodo:invalid,
               .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .edittodo:invalid {
                 outline: 0; }
-              .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .edittodo:valid,
-              .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .edittodo:valid,
-              .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .edittodo:valid {
-                border-color: #00dd22; }
-              .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .edittodo:focus ~ label,
-              .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .edittodo:valid ~ label,
-              .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .edittodo:focus ~ label,
-              .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .edittodo:valid ~ label,
-              .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .edittodo:focus ~ label,
-              .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .edittodo:valid ~ label {
-                font-size: 14px;
-                top: -24px;
-                color: #00dd22; }
             .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .btn,
             .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .btn,
             .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .btn {
@@ -203,6 +196,10 @@ header {
                 height: 30px;
                 margin-right: 4px;
                 border-radius: 5px; }
+                .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .btn .edit img,
+                .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .btn .edit img,
+                .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .btn .edit img {
+                  outline: 2px solid cornflowerblue; }
               .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .btn .delete,
               .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .btn .delete,
               .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .btn .delete {
@@ -210,6 +207,10 @@ header {
                 height: 30px;
                 margin-right: 4px;
                 border-radius: 5px; }
+                .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .btn .delete img,
+                .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .btn .delete img,
+                .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .btn .delete img {
+                  outline: 2px solid cornflowerblue; }
     .wrapper_todos .wrapper .doing {
       grid-column: 6/ span 3; }
       .wrapper_todos .wrapper .doing fieldset {

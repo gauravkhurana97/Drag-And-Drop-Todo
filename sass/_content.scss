@@ -55,7 +55,7 @@
                             // border: 0;
                             outline: 0;
                             padding: 0.5rem 0;
-                            border-bottom: 2px solid #d3d3d3;
+                            border-bottom: 2px solid cornflowerblue;
                             box-shadow: none;
                             color: #111;
                             padding-left: 15px;
@@ -67,16 +67,7 @@
                                 //   border-color: #ff2300;
                             }
 
-                            &:valid {
-                                border-color: #00dd22;
-                            }
 
-                            &:focus~label,
-                            &:valid~label {
-                                font-size: 14px;
-                                top: -24px;
-                                color: #00dd22;
-                            }
 
 
                         }
@@ -88,14 +79,24 @@
                                 flex: 1;
                                 height: 30px;
                                 margin-right: 4px;
-                                border-radius: 5px
+
+                                border-radius: 5px;
+
+                                & img {
+                                    outline: 2px solid cornflowerblue;
+                                }
                             }
 
                             & .delete {
                                 flex: 1;
                                 height: 30px;
                                 margin-right: 4px;
-                                border-radius: 5px
+
+                                border-radius: 5px;
+
+                                & img {
+                                    outline: 2px solid cornflowerblue;
+                                }
                             }
 
 
