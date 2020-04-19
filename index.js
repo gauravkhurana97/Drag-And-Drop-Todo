@@ -145,10 +145,16 @@ const DOMSTRING = {
 
 DOMSTRING.workadder.addEventListener('submit', (event) => {
 
-      event.preventDefault();
-   document.getElementById("check").blur();
-   // event.target.focus = none;
+   event.preventDefault();
+
    var inputvalue = DOMSTRING.work.value;
+   document.getElementById("check").blur();
+
+   if (!inputvalue) {
+      return;
+   }
+
+   // event.target.focus = none;
    var state = DOMSTRING.type_of_work.options[DOMSTRING.type_of_work.selectedIndex].value;
    console.log(state);
    var newList = new ListModal(inputvalue, state);
