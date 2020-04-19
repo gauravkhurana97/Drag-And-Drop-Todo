@@ -1,0 +1,226 @@
+@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  box-sizing: border-box; }
+
+.grid_layout {
+  display: grid;
+  grid-template-rows: 15vh 10vh 70vh 5vh;
+  grid-template-columns: [full-start] repeat(14, [col-start] 1fr [col-end]) [full-end]; }
+
+.add_work_item {
+  grid-row: 2 / span 1;
+  grid-column: full-start / full-end; }
+  .add_work_item .enterWork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    /* Remove IE arrow */
+    /* Custom Select */
+    /* Arrow */
+    /* Transition */ }
+    .add_work_item .enterWork > * {
+      margin: auto 30px;
+      height: 50px;
+      font-size: 20px; }
+    .add_work_item .enterWork #what_work {
+      padding-left: 10px;
+      border-radius: 50px;
+      margin: 15px 0;
+      padding: 15px 10px;
+      width: 30%;
+      outline: none;
+      border: 1px solid #bbb;
+      border-radius: 20px;
+      display: inline-block;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -ms-transition: 0.2s ease all;
+      -o-transition: 0.2s ease all;
+      transition: 0.2s ease all; }
+      .add_work_item .enterWork #what_work:focus {
+        border: 5px solid cornflowerblue; }
+      .add_work_item .enterWork #what_work ::placeholder {
+        color: green; }
+    .add_work_item .enterWork select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      outline: 0;
+      box-shadow: none;
+      background-image: none;
+      color: black;
+      border-radius: 10px; }
+    .add_work_item .enterWork select::-ms-expand {
+      display: none; }
+    .add_work_item .enterWork .select {
+      position: relative;
+      display: flex;
+      width: 20em;
+      height: 3em;
+      line-height: 3;
+      overflow: hidden;
+      border-radius: .25em; }
+    .add_work_item .enterWork select {
+      padding: 0 .5em;
+      color: black;
+      cursor: pointer; }
+    .add_work_item .enterWork .select::after {
+      content: '\25BC';
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 1em;
+      cursor: pointer;
+      pointer-events: none;
+      -webkit-transition: .25s all ease;
+      -o-transition: .25s all ease;
+      transition: .25s all ease; }
+    .add_work_item .enterWork .select:hover::after {
+      color: #f39c12; }
+    .add_work_item .enterWork #check {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%; }
+      .add_work_item .enterWork #check img {
+        height: 60px; }
+
+header {
+  justify-self: center;
+  grid-row: 1 / span 1;
+  grid-column: 1 / -1;
+  letter-spacing: .2rem;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white; }
+  header h1 {
+    margin: 0 auto;
+    font-family: 'Lily Script One', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    color: cornflowerblue;
+    -webkit-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all; }
+
+.wrapper_todos {
+  grid-row: 3 / span 1;
+  grid-column: full-start / full-end; }
+  .wrapper_todos .wrapper {
+    display: grid;
+    grid-template-rows: 70vh;
+    grid-template-columns: [full-start] repeat(14, [col-start] 1fr [col-end]) [full-end];
+    margin-top: 20px; }
+    .wrapper_todos .wrapper .todos,
+    .wrapper_todos .wrapper .done,
+    .wrapper_todos .wrapper .doing {
+      grid-column: 2/ span 3; }
+      .wrapper_todos .wrapper .todos fieldset,
+      .wrapper_todos .wrapper .done fieldset,
+      .wrapper_todos .wrapper .doing fieldset {
+        height: 100%;
+        border: 6px solid black;
+        border-radius: 30px; }
+        .wrapper_todos .wrapper .todos fieldset legend,
+        .wrapper_todos .wrapper .done fieldset legend,
+        .wrapper_todos .wrapper .doing fieldset legend {
+          font-size: 20px; }
+        .wrapper_todos .wrapper .todos fieldset .allTODOLists,
+        .wrapper_todos .wrapper .done fieldset .allTODOLists,
+        .wrapper_todos .wrapper .doing fieldset .allTODOLists {
+          overflow: auto;
+          height: 430px; }
+          .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list,
+          .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list,
+          .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list {
+            display: flex;
+            margin: 10px 10px;
+            align-items: flex-end; }
+            .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list:first-child,
+            .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list:first-child,
+            .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list:first-child {
+              margin-top: 20px; }
+            .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list span,
+            .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list span,
+            .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list span {
+              font-size: 30px;
+              margin-bottom: -2px;
+              margin-right: 5px; }
+            .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .edittodo,
+            .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .edittodo,
+            .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .edittodo {
+              flex: 5;
+              height: 30px;
+              border: none;
+              margin-right: 15px;
+              width: 100%;
+              outline: 0;
+              padding: 0.5rem 0;
+              border-bottom: 2px solid #d3d3d3;
+              box-shadow: none;
+              color: #111;
+              padding-left: 15px;
+              border-radius: 35px; }
+              .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .edittodo:invalid,
+              .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .edittodo:invalid,
+              .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .edittodo:invalid {
+                outline: 0; }
+              .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .edittodo:valid,
+              .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .edittodo:valid,
+              .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .edittodo:valid {
+                border-color: #00dd22; }
+              .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .edittodo:focus ~ label,
+              .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .edittodo:valid ~ label,
+              .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .edittodo:focus ~ label,
+              .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .edittodo:valid ~ label,
+              .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .edittodo:focus ~ label,
+              .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .edittodo:valid ~ label {
+                font-size: 14px;
+                top: -24px;
+                color: #00dd22; }
+            .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .btn,
+            .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .btn,
+            .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .btn {
+              display: flex; }
+              .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .btn .edit,
+              .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .btn .edit,
+              .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .btn .edit {
+                flex: 1;
+                height: 30px;
+                margin-right: 4px;
+                border-radius: 5px; }
+              .wrapper_todos .wrapper .todos fieldset .allTODOLists .single_list .btn .delete,
+              .wrapper_todos .wrapper .done fieldset .allTODOLists .single_list .btn .delete,
+              .wrapper_todos .wrapper .doing fieldset .allTODOLists .single_list .btn .delete {
+                flex: 1;
+                height: 30px;
+                margin-right: 4px;
+                border-radius: 5px; }
+    .wrapper_todos .wrapper .doing {
+      grid-column: 6/ span 3; }
+      .wrapper_todos .wrapper .doing fieldset {
+        height: 100%;
+        border: 6px solid black;
+        border-radius: 30px; }
+        .wrapper_todos .wrapper .doing fieldset legend {
+          font-size: 20px; }
+    .wrapper_todos .wrapper .done {
+      grid-column: 10/ span 3; }
+      .wrapper_todos .wrapper .done fieldset {
+        height: 100%;
+        border: 6px solid black;
+        border-radius: 30px; }
+        .wrapper_todos .wrapper .done fieldset legend {
+          font-size: 20px; }

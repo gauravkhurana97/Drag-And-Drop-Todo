@@ -1,0 +1,154 @@
+.wrapper_todos {
+    grid-row: 3 / span 1;
+    grid-column: full-start / full-end;
+
+    & .wrapper {
+
+        display: grid;
+        grid-template-rows: 70vh;
+        grid-template-columns: [full-start] repeat(14, [col-start] 1fr [col-end]) [full-end];
+        margin-top: 20px;
+
+        & .todos,
+        & .done,
+        & .doing {
+
+            grid-column: 2/ span 3;
+
+            & fieldset {
+                height: 100%;
+                border: 6px solid black;
+                border-radius: 30px;
+
+                & legend {
+                    font-size: 20px;
+                }
+
+                & .allTODOLists {
+
+                    overflow: auto;
+                    height: 430px;
+
+                    & .single_list {
+
+                        &:first-child {
+                            margin-top: 20px;
+                        }
+
+                        display: flex;
+                        margin: 10px 10px;
+                        align-items: flex-end;
+
+                        span {
+                            font-size: 30px;
+                            margin-bottom: -2px;
+                            margin-right: 5px;
+                        }
+
+                        & .edittodo {
+                            flex: 5;
+                            height: 30px;
+                            border: none;
+                            margin-right: 15px;
+
+                            width: 100%;
+                            // border: 0;
+                            outline: 0;
+                            padding: 0.5rem 0;
+                            border-bottom: 2px solid #d3d3d3;
+                            box-shadow: none;
+                            color: #111;
+                            padding-left: 15px;
+                            border-radius: 35px;
+
+                            &:invalid {
+                                outline: 0;
+                                // color: #ff2300;
+                                //   border-color: #ff2300;
+                            }
+
+                            &:valid {
+                                border-color: #00dd22;
+                            }
+
+                            &:focus~label,
+                            &:valid~label {
+                                font-size: 14px;
+                                top: -24px;
+                                color: #00dd22;
+                            }
+
+
+                        }
+
+                        & .btn {
+                            display: flex;
+
+                            & .edit {
+                                flex: 1;
+                                height: 30px;
+                                margin-right: 4px;
+                                border-radius: 5px
+                            }
+
+                            & .delete {
+                                flex: 1;
+                                height: 30px;
+                                margin-right: 4px;
+                                border-radius: 5px
+                            }
+
+
+                        }
+
+
+                    }
+
+
+                }
+
+
+
+            }
+
+
+        }
+
+        & .doing {
+
+            grid-column: 6/ span 3;
+
+
+
+            & fieldset {
+                height: 100%;
+                border: 6px solid black;
+                border-radius: 30px;
+
+                & legend {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        & .done {
+
+            grid-column: 10/ span 3;
+
+
+            & fieldset {
+                height: 100%;
+                border: 6px solid black;
+                border-radius: 30px;
+
+                & legend {
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+
+
+
+}
